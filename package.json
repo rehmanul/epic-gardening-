@@ -1,19 +1,11 @@
 {
   "name": "epic-gardening",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
-    "build": "your-build-tool-command", # e.g., "vite build", "webpack", etc.
-    "start": "your-start-command" # e.g., "vite preview"
+    "build": "vite build",  # ACTUAL build command
+    "preview": "vite preview"  # ACTUAL preview command
   },
   "engines": {
-    "node": ">=20.0.0",
-    "npm": ">=10.0.0"
-  },
-  "dependencies": {
-    // Your actual dependencies
-  },
-  "devDependencies": {
-    // Your actual dev dependencies
+    "node": "20.x"  # Hard lock Node version
   }
 }
