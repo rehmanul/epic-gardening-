@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "your-angular-project": {
+    "epic-gardening": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/your-angular-project",
+            "outputPath": "dist/epic-gardening",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -52,5 +52,5 @@
       }
     }
   },
-  "defaultProject": "your-angular-project"
+  "defaultProject": "epic-gardening"
 }
