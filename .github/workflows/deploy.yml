@@ -38,4 +38,4 @@ jobs:
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
       run: |
         npm install -g netlify-cli
-        netlify deploy --prod --dir=dist/your-project-name  # Change to your publish directory
+        netlify deploy --prod --dir=dist/your-angular-project  # Change to your publish directory
