@@ -4,7 +4,7 @@
   functions = "netlify/functions"
 
 [context.production.environment]
-  NODE_VERSION = "16.x"
+  NODE_VERSION = "16.13.0"
   AWS_LAMBDA_JS_RUNTIME = "nodejs16.x"
 
 [[redirects]]
