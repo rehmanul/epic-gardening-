@@ -4,7 +4,8 @@
   "scripts": {
     "start": "ng serve",
     "test": "ng test",
-    "build": "ng build --prod"
+    "build": "ng build --prod",
+    "custom-build": "npm install && npm run build && echo 'Custom build steps completed'"
   },
   "dependencies": {
     "@angular/animations": "~12.0.0",
