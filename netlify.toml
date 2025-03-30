@@ -1,18 +1,15 @@
 [build]
-  publish = "."  # Root directory since we're using static HTML
-  command = ""   # No build command needed for static HTML
-
-[[redirects]]
-  from = "/old-path"
-  to = "/new-path"
-  status = 301
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self'"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
+  publish = "dist/epic-gardening"
+  command = "ng build --prod"
 
 [context.production.environment]
-  API_URL = "https://api.example.com"
+  GITHUB_TOKEN = "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"
+
+[[plugins]]
+  package = "netlify-plugin-angular-universal"
+
+[[plugins]]
+  package = "netlify-plugin-inline-critical-css"
+
+[[plugins]]
+  package = "netlify-plugin-image-optim"
