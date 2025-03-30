@@ -1,22 +1,18 @@
 [build]
-  publish = "dist/your-angular-project"  # Adjust this to your build output directory
-  command = "npm run build"
-  functions = "netlify/functions"  # Directory where Netlify can find your compiled functions
+  publish = "."  # Root directory since we're using static HTML
+  command = ""   # No build command needed for static HTML
+
+[[redirects]]
+  from = "/old-path"
+  to = "/new-path"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
 
 [context.production.environment]
-  GITHUB_TOKEN = "your_github_token"
-
-[[plugins]]
-  package = "netlify-plugin-chromium"
-
-[[plugins]]
-  package = "netlify-plugin-html-validate"
-
-[[plugins]]
-  package = "netlify-plugin-inline-critical-css"
-
-[[plugins]]
-  package = "netlify-plugin-js-obfuscator"
-
-[[plugins]]
-  package = "netlify-plugin-image-optim"
+  API_URL = "https://api.example.com"
