@@ -2,20 +2,14 @@
   "name": "epic-gardening",
   "version": "1.0.0",
   "scripts": {
-    # Removed redundant `npm install`
-    # Netlify runs install automatically before the build command
     "build": "vite build && echo 'Build completed'"
   },
   "engines": {
-    # Updated Node.js engine requirement to match netlify.toml
-    "node": "20.x", # Changed from "16.x"
-    # You can specify an npm version or remove if the default for Node 20 is fine
-    "npm": ">=10.x" # Example: Updated from "7.x" or remove this line
+    "node": "20.x",
+    "npm": ">=10.x"
   },
-  "dependencies": {
-    # Your project dependencies
-  },
+  "dependencies": {},
   "devDependencies": {
-    "vite": "^5.2.0" # Ensure this is the version you intend to use
+    "vite": "^5.2.0"
   }
 }
