@@ -2,10 +2,14 @@
   "name": "epic-gardening",
   "version": "1.0.0",
   "scripts": {
-    "build": "vite build",  # ACTUAL build command
-    "preview": "vite preview"  # ACTUAL preview command
+    "build": "npm install && vite build && echo 'Build completed'"
   },
   "engines": {
-    "node": "20.x"  # Hard lock Node version
+    "node": "22.x",
+    "npm": "10.x"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^5.2.0"
   }
 }
