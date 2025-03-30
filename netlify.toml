@@ -1,0 +1,21 @@
+[build]
+  publish = "public"  # Adjust this to your build output directory
+  command = "npm run build"
+
+[context.production.environment]
+  GITHUB_TOKEN = "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"
+
+[[plugins]]
+  package = "netlify-plugin-chromium"
+
+[[plugins]]
+  package = "netlify-plugin-html-validate"
+
+[[plugins]]
+  package = "netlify-plugin-inline-critical-css"
+
+[[plugins]]
+  package = "netlify-plugin-js-obfuscator"
+
+[[plugins]]
+  package = "netlify-plugin-image-optim"
