@@ -1,7 +1,13 @@
 [build]
   command = "npm run build"
-  publish = "dist"  # ACTUAL build output folder
-  functions = "netlify/functions"  # Delete if not using functions
+  publish = "dist"
+  functions = "netlify/functions"
 
 [context.production.environment]
-  NODE_VERSION = "20.x"  # Enforced Node version
+  NODE_VERSION = "22.x"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs22.x"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
