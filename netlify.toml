@@ -1,16 +1,13 @@
 [build]
-  command = "npm run build:ssr"
-  publish = "dist/epic-gardening/browser"
-  functions = "dist/epic-gardening/server"
+  command = "npm run build"
+  publish = "dist" # Replace with your framework's output folder (e.g., "build", "public")
+  functions = "netlify/functions" # Only if using serverless functions
 
-[[plugins]]
-  package = "netlify-plugin-angular-universal"
+[context.production.environment]
+  NODE_VERSION = "20.x" # Node 22.x has compatibility gaps. 20.x is stable.
+  AWS_LAMBDA_JS_RUNTIME = "nodejs20.x" # If using Lambda functions
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[context.production.environment]
-  API_URL = "https://api.example.com"
-  NODE_VERSION = "14.x"
