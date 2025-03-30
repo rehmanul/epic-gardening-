@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/your-project-name"  # Adjust this to your build output directory
+  publish = "dist/epicgarden"  # Adjust this to your build output directory
   command = "npm run build"
   functions = "netlify/functions"  # Directory where Netlify can find your compiled functions
 
@@ -20,6 +20,3 @@
 
 [[plugins]]
   package = "netlify-plugin-image-optim"
-
-[build.cache]
-  paths = ["node_modules/**", ".cache/**", "public/**"]
