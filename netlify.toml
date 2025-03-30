@@ -1,15 +1,16 @@
 [build]
-  publish = "dist/epic-gardening"
-  command = "ng build --prod"
-
-[context.production.environment]
-  GITHUB_TOKEN = "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"
+  command = "npm run build:ssr"
+  publish = "dist/epic-gardening/browser"
+  functions = "dist/epic-gardening/server"
 
 [[plugins]]
   package = "netlify-plugin-angular-universal"
 
-[[plugins]]
-  package = "netlify-plugin-inline-critical-css"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
-[[plugins]]
-  package = "netlify-plugin-image-optim"
+[context.production.environment]
+  API_URL = "https://api.example.com"
+  NODE_VERSION = "14.x"
