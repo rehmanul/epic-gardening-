@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/epicgarden"  # Adjust this to your build output directory
+  publish = "dist/your-angular-project"  # Adjust this to your build output directory
   command = "npm run build"
   functions = "netlify/functions"  # Directory where Netlify can find your compiled functions
 
