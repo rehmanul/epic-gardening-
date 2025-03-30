@@ -1,0 +1,6 @@
+# .gitignore
+node_modules/  # Ignore npm dependencies
+dist/          # Ignore build output
+netlify/functions/**/*.js  # Ignore compiled functions (if used)
+.env           # Ignore environment variables
+.DS_Store      # Ignore macOS system files
