@@ -1,13 +1,7 @@
 [build]
   command = "npm run build"
-  publish = "dist" # Replace with your framework's output folder (e.g., "build", "public")
-  functions = "netlify/functions" # Only if using serverless functions
+  publish = "dist"  # ACTUAL build output folder
+  functions = "netlify/functions"  # Delete if not using functions
 
 [context.production.environment]
-  NODE_VERSION = "20.x" # Node 22.x has compatibility gaps. 20.x is stable.
-  AWS_LAMBDA_JS_RUNTIME = "nodejs20.x" # If using Lambda functions
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  NODE_VERSION = "20.x"  # Enforced Node version
