@@ -1,20 +1,11 @@
-# netlify.toml
-
 [build]
-  # The command to build your site
-  command = "npm run build"
-  # The directory to publish (relative to the root of your repo)
-  publish = "dist"
-  # The directory containing your Netlify Functions (optional)
-  functions = "netlify/functions"
-
-[context.production.environment]
-  # Set the Node.js version compatible with Vite 5+
-  NODE_VERSION = "20" # Changed from "16.13.0"
-  # Update the AWS Lambda runtime accordingly
-  AWS_LAMBDA_JS_RUNTIME = "nodejs20.x" # Changed from "nodejs16.x"
+  publish = "." # Directly use root directory
+  command = "" # No build command needed
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[context.production.environment]
+  NODE_VERSION = "18" # Still useful for any Node-based plugins
