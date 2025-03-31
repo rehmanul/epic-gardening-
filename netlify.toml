@@ -1,11 +1,23 @@
 [build]
-  publish = "." # Directly use root directory
-  command = "" # No build command needed
+  publish = "."        # Publish from root directory
+  command = "echo 'No build required for static site'"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline'"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
 [context.production.environment]
-  NODE_VERSION = "18" # Still useful for any Node-based plugins
+  NODE_VERSION = "18"  # Explicit Node.js version
+  AWS_LAMBDA_JS_RUNTIME = "nodejs18.x"
+
+[functions]
+  directory = "unused" # Disable functions
