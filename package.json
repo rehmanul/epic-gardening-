@@ -1,15 +1,7 @@
 {
-  "name": "epic-gardening",
+  "name": "epic-gardening-static",
   "version": "1.0.0",
   "scripts": {
-    "build": "vite build && echo 'Build completed'"
-  },
-  "engines": {
-    "node": "20.x",
-    "npm": ">=10.x"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "vite": "^5.2.0"
+    "build": "echo 'No build needed for static site'"
   }
 }
