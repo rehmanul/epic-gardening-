@@ -1,7 +1,7 @@
 {
-  "name": "epic-gardening-static",
+  "name": "epic-gardening",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo 'No build needed for static site'"
+    "build": "echo 'Static site - no build required'"
   }
 }
