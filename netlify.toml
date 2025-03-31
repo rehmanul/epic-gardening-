@@ -1,6 +1,6 @@
 [build]
-  publish = "."        # Publish from root directory
-  command = "echo 'No build required for static site'"
+  publish = "."  # All HTML files are in root
+  command = "echo 'Static site ready'" 
 
 [[redirects]]
   from = "/*"
@@ -10,14 +10,9 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline'"
+    Content-Security-Policy = "default-src 'self'"
     X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 [context.production.environment]
-  NODE_VERSION = "18"  # Explicit Node.js version
-  AWS_LAMBDA_JS_RUNTIME = "nodejs18.x"
-
-[functions]
-  directory = "unused" # Disable functions
+  NODE_VERSION = "18"
