@@ -1,6 +1,10 @@
 [build]
-  publish = "."  # All HTML files are in root
-  command = "echo 'Static site ready'" 
+  publish = "."  # Explicit root directory
+  command = "echo 'No build required'"
+
+# Remove all plugin configurations
+[functions]
+  directory = "unused"
 
 [[redirects]]
   from = "/*"
@@ -12,7 +16,7 @@
   [headers.values]
     Content-Security-Policy = "default-src 'self'"
     X-Frame-Options = "DENY"
-    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
 
 [context.production.environment]
   NODE_VERSION = "18"
